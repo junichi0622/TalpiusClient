@@ -10,15 +10,17 @@ import java.util.Map;
 
 public class EventDispatcher {
 
-    private Map<String, List<Object>> listeners = new HashMap<>();
+    private Map<Class<?>, List<Object>> listeners = new HashMap<>();
 
-    @Target(ElementType.METHOD)
-    @Retention(RetentionPolicy.RUNTIME)
+    @Target(value = ElementType.METHOD)
+    @Retention(value = RetentionPolicy.RUNTIME)
     public @interface Subscriber {
-
+        
     }
 
-    public void register(Object listener) {
-        
+
+
+    public void dispatch(Object event) {
+        listeners.get(event);
     }
 }
