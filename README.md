@@ -1,2 +1,2 @@
-# Talpius
-Anarchy Client for Minecraft a
+# TalpiusClient
+Minecraft 1.21.4 Utility Mod for Anarchy and Crystal PvP
