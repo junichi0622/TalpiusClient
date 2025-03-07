@@ -2,6 +2,7 @@ package net.typicartist.talpius.event.listener;
 
 import net.minecraftforge.client.event.ClientChatEvent;
 import net.minecraftforge.client.event.ClientChatReceivedEvent;
+import net.minecraftforge.event.TickEvent.PlayerTickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public class Adapter {
@@ -10,12 +11,17 @@ public class Adapter {
     
     @SubscribeEvent
     public void onClientChat(ClientChatEvent event) {
-        event.setCanceled(true);
+        
     }
 
     @SubscribeEvent
     public void onClientChatReceived(ClientChatReceivedEvent event) {
     
+    }
+
+    @SubscribeEvent
+    public void onPlayerTick(PlayerTickEvent event) {
+
     }
 
     public static Adapter getInstance() {
