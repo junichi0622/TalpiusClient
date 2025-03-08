@@ -33,4 +33,5 @@ public class TalpiusMod {
     private void onClientSetup(final FMLClientSetupEvent event) {
         TalpiusGlobals.getInstance().init(event);
     }
+    
 }

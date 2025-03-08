@@ -21,4 +21,5 @@ public class TalpiusGlobals {
     public static TalpiusGlobals getInstance() {
         return INSTANCE;
     }
+    
 }
