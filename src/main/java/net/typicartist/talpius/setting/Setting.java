@@ -36,12 +36,7 @@ public class Setting<T> {
     }
 
     public void setValue(T value) {
-        if (min != null && max != null) {
-            final Number v = (Number) value;
-            this.value = value;
-        } else {
-            this.value = value;
-        }
+        this.value = value;
     }
     
     public T getMin() {
@@ -78,9 +73,11 @@ public class Setting<T> {
 
     public boolean isVisible() {
         if (parent != null) {
+
             if (!parent.getValue().isExtended()) {
                 return false;
             }
+            
         }
 
         return visibility.getAsBoolean();
