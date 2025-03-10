@@ -23,7 +23,7 @@ public class Adapter {
     public void onClientTick(ClientTickEvent event) {
 
     }
-
+    
     public static Adapter getInstance() {
         return INSTANCE;
     }
