@@ -27,9 +27,6 @@ public abstract class Module {
 
     public static final Minecraft mc = Minecraft.getInstance();
 
-    private int minProtocol = 0;
-    private int maxProtocol = 1000;
-
     public Module(String name, String description, int keybind, Category category, String... aliases) {
         this.name = name;
         this.description = description;
