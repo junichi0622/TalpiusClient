@@ -16,7 +16,25 @@ public class ModuleManager {
 
     public static Module getModuleByName(String name) {
         for (Module module : modules) {
-            return module;
+            if (module.getName().equalsIgnoreCase(name)) {
+                return module;
+            }
+
+            for (String alias : module.getAliases()) {
+                if (alias.toLowerCase().startsWith(name.toLowerCase())) {
+                    return module;
+                }
+            }
+        }
+
+        return null;
+    }
+
+    public static Module getModuleByClass(Class<? extends Module> clazz) {
+        for (Module module : modules) {
+            if (module.getClass() == clazz) {
+                return module;
+            }  
         }
 
         return null;

@@ -9,22 +9,20 @@ import net.typicartist.talpius.event.EventDispatcher;
 public class Adapter {
 
     private static final Adapter INSTANCE = new Adapter();
-
-    private static final EventDispatcher dispatcher = EventDispatcher.getInstance();
     
     @SubscribeEvent
     public void onClientChat(ClientChatEvent event) {
-        dispatcher.dispatch(event);
+        EventDispatcher.Companion.dispatch(event);
     }
 
     @SubscribeEvent
     public void onClientChatReceived(ClientChatReceivedEvent event) {
-    
+        EventDispatcher.Companion.dispatch(event);
     }
 
     @SubscribeEvent
     public void onClientTick(ClientTickEvent event) {
-
+        
     }
     
     public static Adapter getInstance() {
